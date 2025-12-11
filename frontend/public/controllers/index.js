@@ -82,4 +82,5 @@ const API_URL = "http://localhost:3000";
 const loginBtn = document.getElementById('login-btn');
 loginBtn.addEventListener('click', handleLogin);
 
-document.getElementById('register-btn').addEventListener('click', handleRegister);
+const registerBtn = document.getElementById('register-btn');
+loginBtn.addEventListener('click', handleRegister);
