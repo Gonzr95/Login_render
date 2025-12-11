@@ -1,9 +1,11 @@
 ### SIGN UP invalid por falta de datos
 
-POST http://localhost:3000/register
+POST https://login-render-om8l.onrender.com/register
 Content-Type: application/json
 
 {
+  "lastName": "nombreGenerico",
+  "firstName": "apellidoGenerico",
   "mail": "mailgenerico1@hotmail.com",
   "pass": "Inicio1."
 }

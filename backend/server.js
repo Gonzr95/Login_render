@@ -14,6 +14,7 @@ app.use(
     origin: [
       'http://127.0.0.1:5500', // Live Server suele usar IP numérica
       'http://localhost:5500', // A veces se accede así
+      '*'
     ],
       credentials: true // Permite envío de cookies o headers de autorización no se puede usar en conjunto con * por seguridad
   })
