@@ -19,6 +19,7 @@ app.use(
       //credentials: true // Permite envío de cookies o headers de autorización, no se puede usar en conjunto con * por seguridad
   })
 );
+app.options('*', cors());
 app.use(express.json()); //Cada vez que llegue body con json convertilo a un objeto JS
 
 
