@@ -76,3 +76,17 @@ const API_URL = "http://localhost:3000";
             errorDiv.innerText = "Error de conexión";
         }
     }
+
+
+
+    const loginBtn = document.getElementById('login-btn');
+    loginBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        handleLogin();
+    });
+
+    const registerBtn = document.getElementById('register-btn');
+    registerBtn.addEventListener('click', (e) => {
+        //e.preventDefault();
+        handleRegister();
+    });
