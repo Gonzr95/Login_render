@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import dotenv from "dotenv";
 dotenv.config(); // Cargar variables desde .env
 
-const SECRET = process.env.JWT_SECRET || 'secreto_temporal_para_desarrollo'; // Fallback por seguridad
+const SECRET = process.env.JWT_SECRET; // Fallback por seguridad
 
 export function generateToken(payload) {
     // El token expira en 2 horas (puedes cambiarlo a '7d', '15m', etc.)

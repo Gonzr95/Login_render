@@ -3,7 +3,7 @@ import { Sequelize } from "sequelize";
 import dotenv from "dotenv";
 dotenv.config(); // Cargar variables desde .env
 
-/*
+
 const sequelize = new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USER,
@@ -19,8 +19,8 @@ const sequelize = new Sequelize(
     logging: false,
   }}
 });
-*/
 
+/*
 //para render con back end alojado en local
 const sequelize = new Sequelize(process.env.RENDER_EXT_DATABASE_URL, {
   dialect: "postgres",
@@ -42,5 +42,6 @@ const connectDB = async () => {
     console.error("Error al conectar con PostgreSQL de Render:", error);
     }
 };
+*/
 
 export { sequelize, connectDB };
