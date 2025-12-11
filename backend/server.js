@@ -8,7 +8,7 @@ const port = 3000;
 import { router as usersRouter} from "./routes/users.js";
 
 // ********** Middlewares **********
-
+app.options("*", cors());
 app.use(
   cors({
     //origin: 'http://localhost:5500', // Solo permitimos peticiones desde aquí (puerto típico de Vite/React)
@@ -22,7 +22,7 @@ app.use(
       credentials: true // Permite envío de cookies o headers de autorización no se puede usar en conjunto con * por seguridad
   })
 );
-app.options("*", cors());
+
 app.use(express.json()); //Cada vez que llegue body con json convertilo a un objeto JS
 
 
