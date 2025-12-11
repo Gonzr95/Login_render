@@ -1,3 +1,4 @@
+import { meRoute, renderApiUrl, logoutRoute } from './config.js';
 const API_URL = "http://localhost:3000/";
 
     // Función que se ejecuta apenas carga la página
@@ -12,7 +13,7 @@ const API_URL = "http://localhost:3000/";
 
         try {
             // 2. Petición al endpoint protegido (/me)
-            const response = await fetch(`${API_URL}me`, {
+            const response = await fetch(`${renderApiUrl}${meRoute}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -53,7 +54,7 @@ const API_URL = "http://localhost:3000/";
         
         // Opcional: Avisar al backend para ponerlo en lista negra
         try {
-            await fetch(`${API_URL}/logout`, {
+            await fetch(`${renderApiUrl}/${logoutRoute}`, {
                 method: 'POST',
                 headers: { 'Authorization': `Bearer ${token}` }
             });

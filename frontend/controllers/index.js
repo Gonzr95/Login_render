@@ -1,4 +1,5 @@
 //const API_URL = "http://gonzadev.tplinkdns.com:3000"; 
+import { renderApiUrl, loginRoute, registerRoute } from './config.js';
 const API_URL = "http://localhost:3000";
 
 
@@ -9,7 +10,7 @@ const API_URL = "http://localhost:3000";
         const errorDiv = document.getElementById('loginError');
 
         try {
-            const response = await fetch(`${API_URL}/login`, {
+            const response = await fetch(`${renderApiUrl}${loginRoute}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ mail, pass })
@@ -47,7 +48,7 @@ const API_URL = "http://localhost:3000";
         const errorDiv = document.getElementById('regError');
 
         try {
-            const response = await fetch(`${API_URL}/register`, {
+            const response = await fetch(`${renderApiUrl}${registerRoute}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ firstName, lastName, mail, pass })
