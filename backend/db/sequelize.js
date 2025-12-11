@@ -32,7 +32,7 @@ const sequelize = new Sequelize(process.env.RENDER_EXT_DATABASE_URL, {
   },
   logging: false,
 });
-
+*/
 const connectDB = async () => {
   try {
     await sequelize.authenticate();
@@ -42,6 +42,6 @@ const connectDB = async () => {
     console.error("Error al conectar con PostgreSQL de Render:", error);
     }
 };
-*/
+
 
 export { sequelize, connectDB };
