@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { connectDB } from "./db/sequelize.js";
-connectDB();
+
 const app = express();
 app.disable('x-powered-by');
 const port = 3000;
@@ -23,6 +23,7 @@ app.options('*', cors());
 app.use(express.json()); //Cada vez que llegue body con json convertilo a un objeto JS
 
 
+connectDB();
 // Ruta principal
 app.get('/', (req, res) => {
   res.send(`
