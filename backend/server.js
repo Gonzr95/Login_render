@@ -14,7 +14,9 @@ app.use(
     origin: [
       'https://login-render-frontend.onrender.com'
     ],
-      credentials: true // Permite envío de cookies o headers de autorización, no se puede usar en conjunto con * por seguridad
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Explicita los métodos permitidos
+    allowedHeaders: ['Content-Type', 'Authorization'] // Explicita los headers
+      //credentials: true // Permite envío de cookies o headers de autorización, no se puede usar en conjunto con * por seguridad
   })
 );
 app.use(express.json()); //Cada vez que llegue body con json convertilo a un objeto JS
