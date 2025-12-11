@@ -83,4 +83,4 @@ const loginBtn = document.getElementById('login-btn');
 loginBtn.addEventListener('click', handleLogin);
 
 const registerBtn = document.getElementById('register-btn');
-loginBtn.addEventListener('click', handleRegister);
+registerBtn.addEventListener('click', handleRegister);
