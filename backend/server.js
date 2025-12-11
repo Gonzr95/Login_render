@@ -12,12 +12,9 @@ app.use(
   cors({
     //origin: 'http://localhost:5500', // Solo permitimos peticiones desde aquí (puerto típico de Vite/React)
     origin: [
-      'http://127.0.0.1:5500', // Live Server suele usar IP numérica
-      'http://localhost:5500', // A veces se accede así
-      '*',
       'https://login-render-frontend.onrender.com'
     ],
-      credentials: true // Permite envío de cookies o headers de autorización no se puede usar en conjunto con * por seguridad
+      credentials: true // Permite envío de cookies o headers de autorización, no se puede usar en conjunto con * por seguridad
   })
 );
 app.use(express.json()); //Cada vez que llegue body con json convertilo a un objeto JS
