@@ -79,14 +79,7 @@ const API_URL = "http://localhost:3000";
 
 
 
-    const loginBtn = document.getElementById('login-btn');
-    loginBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        handleLogin();
-    });
+const loginBtn = document.getElementById('login-btn');
+loginBtn.addEventListener('click', handleLogin);
 
-    const registerBtn = document.getElementById('register-btn');
-    registerBtn.addEventListener('click', (e) => {
-        //e.preventDefault();
-        handleRegister();
-    });
+document.getElementById('register-btn').addEventListener('click', handleRegister);
