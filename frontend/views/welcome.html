@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styles/welcome.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <div id="loading">Cargando perfil...</div>
+
+    <div id="content" class="card" style="display: none;">
+        <h1>¡Hola, <span id="userName">Usuario</span>!</h1>
+        <p>Tu email es: <b id="userEmail">...</b></p>
+        <p>Esta es información protegida traída desde el servidor.</p>
+        
+        <button onclick="handleLogout()">Cerrar Sesión</button>
+    </div>
+</body>
+<script src="../controllers/welcome.js"></script>
+</html>
