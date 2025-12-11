@@ -1,4 +1,4 @@
-export const renderApiUrl = "https://login-render-0m81.onrender.com";
+export const renderApiUrl = "https://login-render-om81.onrender.com";
 export const loginRoute = "/login";
 export const registerRoute = "/register";
 export const meRoute = "/me";
