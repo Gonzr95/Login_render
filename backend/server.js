@@ -8,7 +8,7 @@ const port = 3000;
 import { router as usersRouter} from "./routes/users.js";
 
 // ********** Middlewares **********
-app.options("*", cors());
+
 app.use(
   cors({
     //origin: 'http://localhost:5500', // Solo permitimos peticiones desde aquí (puerto típico de Vite/React)
